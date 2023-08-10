@@ -10,7 +10,6 @@ basicmath_small
 bitcnts
 qsort_large
 qsort_small
-susan
 
 output_large.corners.pgm
 output_large.edges.pgm
