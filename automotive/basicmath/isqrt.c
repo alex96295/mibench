@@ -2,6 +2,8 @@
 
 #include <string.h>
 #include "snipmath.h"
+#include "util.h"
+#include "dma.h"
 
 #define BITSPERLONG 32
 
@@ -61,7 +63,9 @@ void usqrt(unsigned long x, struct int_sqrt *q)
                   a++;
             }
       }
-      memcpy(q, &a, sizeof(long));
+//      memcpy(q, &a, sizeof(long));
+      sys_dma_blk_memcpy(q, &a, sizeof(long));
+      fence();
 }
 
 #ifdef TEST
