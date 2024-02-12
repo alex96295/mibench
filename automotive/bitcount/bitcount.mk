@@ -7,6 +7,6 @@ automotive-bitcount:
 	$(CC) $(INCLUDES) $(CCFLAGS) $(BITCOUNT_SRCS_C) -o $(MIBENCH_DIR)/bin/bitcount.$(ELF_PREFIX).elf $(LDFLAGS) $(LDLINK) $(LDLIBS) -lm
 	$(OBJDUMP) -d -S $(MIBENCH_DIR)/bin/bitcount.$(ELF_PREFIX).elf > $(MIBENCH_DIR)/bin/bitcount.$(ELF_PREFIX).dump
 
-.PHONY: clean
-clean:
+.PHONY: bitcount-clean
+bitcount-clean:
 	rm -rf bitcount output*

@@ -7,6 +7,6 @@ automotive-basicmath:
 	$(CC) $(INCLUDES) $(CCFLAGS) $(BASICMATH_SRCS_C) -o $(MIBENCH_DIR)/bin/basicmath.$(ELF_PREFIX).elf $(LDFLAGS) $(LDLINK) $(LDLIBS) -lm
 	$(OBJDUMP) -d -S $(MIBENCH_DIR)/bin/basicmath.$(ELF_PREFIX).elf > $(MIBENCH_DIR)/bin/basicmath.$(ELF_PREFIX).dump
 
-.PHONY: clean
-clean:
+.PHONY: basicmath-clean
+basicmath-clean:
 	rm -rf basicmath output*

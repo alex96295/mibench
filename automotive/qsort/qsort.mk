@@ -11,6 +11,6 @@ automotive-qsort-large:
 	$(CC) $(INCLUDES) $(CCFLAGS) $(MIBENCH_DIR)/automotive/qsort/qsort_large.c -o $(MIBENCH_DIR)/bin/qsort_large.$(ELF_PREFIX).elf $(LDFLAGS) $(LDLINK) $(LDLIBS) -lm
 	$(OBJDUMP) -d -S $(MIBENCH_DIR)/bin/qsort_large.$(ELF_PREFIX).elf > $(MIBENCH_DIR)/bin/qsort_large.$(ELF_PREFIX).dump
 
-.PHONY: clean
-clean:
+.PHONY: qsort-clean
+qsort-clean:
 	rm -rf qsort_small qsort_large output*
